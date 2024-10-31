@@ -1,0 +1,173 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+/* Barra superior */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+}
+
+.search-bar {
+    width: 60%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.settings-btn {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.user-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Banner */
+.banner {
+    width: 80%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.banner-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Navegación */
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.nav-item {
+    background-color: #b91515;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #000000;
+    cursor: pointer;
+    flex: 1 1 150px;
+    text-decoration: none;
+}
+
+/* Sección de ayuda */
+.help-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.help-image {
+    width: 450px;
+    height: 70vh;
+    padding-bottom: 60px;
+}
+
+/* Sección ¿Sabes cómo denunciar? */
+.how-to-report-section {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
+    text-align: center;
+}
+
+.how-to-report-section h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #b91515;
+    margin-bottom: 10px;
+}
+
+.report-steps {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.report-steps li {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.summary-button {
+    background-color: #b91515;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.summary-button:hover {
+    background-color: #a10f0f;
+}
+
+/* Vista móvil y ajuste para scroll horizontal en navegación */
+@media (max-width: 768px) {
+    .navigation {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        justify-content: flex-start;
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    .nav-item {
+        flex: 0 0 auto;
+        margin-right: 10px;
+    }
+}
+
+/* Vista escritorio: fila normal */
+@media (min-width: 769px) {
+    .navigation {
+        justify-content: space-around;
+    }
+
+    .banner {
+        width: 90%;
+    }
+
+    .how-to-report-section {
+        width: 80%;
+    }
+}

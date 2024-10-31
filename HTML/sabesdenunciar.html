@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="/CSS/sabesdenunciar.css">
+</head>
+<body>
+    <header class="top-bar">
+        <input type="text" class="search-bar" placeholder="Buscar">
+        <button class="settings-btn">⚙️</button>
+        <img src="/img/usuario.jfif" alt="Foto de Usuario" class="user-photo">
+    </header>
+    
+    <section class="banner">
+        <img src="/img/banner.png" alt="Banner" class="banner-image">
+    </section>
+    
+    <nav class="navigation">
+        <a href="DDHH.html" class="nav-item">DD.HH más violentados</a>
+        <a href="problemas.html" class="nav-item">Sitios de ayuda</a>
+        <a href="sitioayuda.html" class="nav-item">Problemas vividos</a>
+        <a href="aspecto.html" class="nav-item">Aspecto Judicial</a>
+        <a href="sabesdenunciar.html" class="nav-item">¿Sabes como denunciar?</a>
+        <a href="foro.html" class="nav-item">Link del foro</a>
+    </nav>
+    
+    <section class="how-to-report-section">
+        <h2>¿Sabes cómo denunciar?</h2>
+        <ol class="report-steps" id="report-steps">
+            <li>Identifique la entrega: Antes de presentar una denuncia, asegúrese de identificar claramente la entrega que desea reportar.</li>
+            <li>Acudir a la autoridad competente: Conducir a la autoridad competente para reportar el delito. Puede ser la policía local, la fiscalía o alguna otra institución encargada de recibir denuncias.</li>
+            <li>Presentar la denuncia: Una vez en la autoridad competente, explica detalladamente lo sucedido y presenta tu denuncia por escrito. Es importante asegurarse de que la información sea relevante y tenga evidencia de que lo tienes.</li>
+            <li>Proporcionar tus datos personales: Es posible que te pidan tus datos personales para poder contactarte en caso de necesitar más información o testimonio.</li>
+            <li>Firme la denuncia: Es probable que tengas que firmar la denuncia para confirmar que estás presentando la información de manera voluntaria y verídica.</li>
+            <li>Obtener un número de seguimiento: Al finalizar el proceso de denuncia, asegúrese de obtener un Número de seguimiento o algún tipo de comprobante que le permita dar seguimiento al caso.</li>
+            <li>Colaborar con las autoridades: Una vez presentada la denuncia, colabore con las autoridades en caso de que necesiten más información o testimonio para esclarecer el caso.</li>
+        </ol>
+        <button class="summary-button" onclick="toggleSummary()">RESUMIR LOS PASOS</button>
+    </section>
+    
+    <script>
+        let isSummarized = false;
+    
+        function toggleSummary() {
+            const reportSteps = document.getElementById("report-steps");
+            const summaryButton = document.querySelector(".summary-button");
+    
+            if (!isSummarized) {
+                reportSteps.innerHTML = `
+                    <li>Identificar la entrega: Asegúrate de tener clara la entrega o el hecho que deseas reportar, especialmente si tienes evidencia.</li>
+                    <li>Acudir a la autoridad competente: Dirígete a la policía, fiscalía u otra entidad encargada de recibir denuncias.</li>
+                    <li>Presentar la denuncia: Explica lo sucedido detalladamente y por escrito, asegurándote de incluir información relevante.</li>
+                    <li>Proporcionar tus datos personales: Te solicitarán tus datos de contacto por si se requiere más información.</li>
+                    <li>Firmar la denuncia: Confirmar que la denuncia es voluntaria y verídica al firmarla.</li>
+                    <li>Obtener un número de seguimiento: Asegúrate de recibir un comprobante o número que te permita seguir el caso.</li>
+                    <li>Colaborar con las autoridades: Ayuda con más información o tu testimonio si es necesario para resolver el caso.</li>
+                `;
+                summaryButton.textContent = "VER TODOS LOS PASOS";
+                isSummarized = true;
+            } else {
+                reportSteps.innerHTML = `
+                    <li>Identifique la entrega: Antes de presentar una denuncia, asegúrese de identificar claramente la entrega que desea reportar.</li>
+                    <li>Acudir a la autoridad competente: Conducir a la autoridad competente para reportar el delito. Puede ser la policía local, la fiscalía o alguna otra institución encargada de recibir denuncias.</li>
+                    <li>Presentar la denuncia: Una vez en la autoridad competente, explica detalladamente lo sucedido y presenta tu denuncia por escrito. Es importante asegurarse de que la información sea relevante y tenga evidencia de que lo tienes.</li>
+                    <li>Proporcionar tus datos personales: Es posible que te pidan tus datos personales para poder contactarte en caso de necesitar más información o testimonio.</li>
+                    <li>Firme la denuncia: Es probable que tengas que firmar la denuncia para confirmar que estás presentando la información de manera voluntaria y verídica.</li>
+                    <li>Obtener un número de seguimiento: Al finalizar el proceso de denuncia, asegúrese de obtener un Número de seguimiento o algún tipo de comprobante que le permita dar seguimiento al caso.</li>
+                    <li>Colaborar con las autoridades: Una vez presentada la denuncia, colabore con las autoridades en caso de que necesiten más información o testimonio para esclarecer el caso.</li>
+                `;
+                summaryButton.textContent = "RESUMIR LOS PASOS";
+                isSummarized = false;
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,69 @@
+/* CSS para la pantalla splash */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background-color: #ffff ;
+}
+
+.splash-container {
+    text-align: center;
+}
+
+.logo {
+    width: 250px; /* Ajustar según el tamaño de tu logo */
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 4em;
+    color: #333;
+}
+
+.loading-message {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #777;
+    opacity: 1;
+    animation: fadeOut 3s forwards;
+}
+
+.institution-name {
+    margin-top: 5px;
+    width: 200px; /* Ajustar según el tamaño de la imagen de la institución */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Media queries para responsividad en la página de bienvenida (splash) */
+
+/* Para pantallas de 600px o menos (móviles) */
+@media (max-width: 600px) {
+    .logo {
+        width: 80%;
+        max-width: 250px; /* Ajustar el tamaño de la imagen del logo */
+    }
+
+    .title {
+        font-size: 1.8em; /* Ajusta el tamaño del título */
+    }
+
+    .loading-message {
+        font-size: 1em; /* Ajusta el tamaño del mensaje de carga */
+    }
+
+    .institution-name {
+        font-size: 0.9em; /* Ajusta el tamaño del nombre de la institución */
+    }
+}

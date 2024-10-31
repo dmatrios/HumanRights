@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario Logueado</title>
+    <link rel="stylesheet" href="/CSS/usuario.css">
+</head>
+<body>
+    <div class="profile-container">
+        <img src="/img/usuario.jfif" alt="Foto de Usuario" class="profile-pic">
+        <!-- Cambiar por la ruta real de la foto -->
+        <div class="options">
+            <button class="option-button">Cambiar nombre de usuario</button>
+            <button class="option-button">Cambiar contraseña</button>
+            <button id="usarHumanRights" class="option-button">Usar Human Rights</button>
+
+        </div>
+    </div>
+    <footer class="footer">
+        <img src="/img/institucion.jfif" alt="Nombre de la Institución" class="institution-logo">
+        <!-- Cambiar por la ruta real -->
+    </footer>
+</body>
+<script>
+    document.getElementById("usarHumanRights").addEventListener("click", function () {
+        window.location.href = "bienvenida.html";
+    });
+</script>
+
+</html>

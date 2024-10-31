@@ -1,0 +1,124 @@
+/* CSS para la página de inicio de sesión */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrar contenido */
+    width: 100%;
+    padding: 20px;
+
+}
+
+.logo {
+    width: 160px; /* Ajustar según el tamaño de tu logo */
+    margin-right: 10px; /* Espacio entre logo y título */
+}
+
+.title-container {
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+.title {
+    font-size: 4.5em;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 2em;
+    color: #777;
+    margin: 0;
+}
+
+.form-container {
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #e7e7e7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.form-title {
+    font-size: 1.5em; /* Tamaño del título del formulario */
+    margin-bottom: 10px; /* Espacio debajo del título */
+    text-align: center; /* Centrar el texto */
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px;
+    background-color: #b91515; /* Color de fondo */
+    color: #fff; /* Color de texto */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f2a65a; /* Color de fondo al pasar el ratón */
+    transition: all 1s;
+}
+
+/* Media queries para responsividad en la página de inicio de sesión */
+
+/* Para pantallas de 600px o menos (móviles) */
+@media (max-width: 600px) {
+    .logo-container img {
+        width: 60px; /* Tamaño del logo en móvil */
+    }
+
+    .title {
+        font-size: 1.5em; /* Tamaño del título en móvil */
+    }
+
+    .subtitle {
+        font-size: 1em; /* Tamaño del subtítulo en móvil */
+    }
+
+    .form-container {
+        width: 90%; /* Ajustar el ancho del contenedor del formulario */
+        background-color: #fff ;
+    }
+
+    .form-container input, .form-container button {
+        font-size: 1em; /* Ajuste de tamaño de fuente de los campos y botón */
+        padding: 10px; /* Espacio en los campos y botón */
+    }
+}
